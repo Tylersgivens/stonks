@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <h1>Welcome, {{ username }}</h1>
+  <p>This Raspberry Pi local app is running with authenticated access.</p>
+  <div class="actions">
+    {% if is_admin %}
+    <a class="button" href="{{ url_for('admin_accounts') }}">Manage Accounts</a>
+    {% endif %}
+    <a class="button secondary" href="{{ url_for('logout') }}">Logout</a>
+  </div>
+</section>
+{% endblock %}
