@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<section class="card">
+  <h1>Admin: Account Management</h1>
+  <p>Create and review user accounts for this device.</p>
+
+  <h2>Create Account</h2>
+  <form method="post" class="form-grid">
+    <label for="username">Username</label>
+    <input id="username" name="username" required />
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required />
+
+    <label class="checkbox">
+      <input id="is_admin" name="is_admin" type="checkbox" />
+      Admin account
+    </label>
+
+    <button type="submit">Create User</button>
+  </form>
+
+  <h2>Current Accounts</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Created</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user['username'] }}</td>
+        <td>{{ 'Admin' if user['is_admin'] else 'User' }}</td>
+        <td>{{ user['created_at'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <a class="button secondary" href="{{ url_for('dashboard') }}">Back</a>
+  </div>
+</section>
+{% endblock %}

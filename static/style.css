@@ -1,0 +1,93 @@
+:root {
+  color-scheme: light dark;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #1f2937;
+}
+
+.container {
+  max-width: 720px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+h1, h2, p, label, td, th {
+  color: #f3f4f6;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+input {
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #1f2937;
+  color: #f3f4f6;
+}
+
+button, .button {
+  display: inline-block;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: #4b5563;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border-bottom: 1px solid #374151;
+  text-align: left;
+  padding: 0.5rem 0;
+}
+
+.flash-wrapper {
+  margin-bottom: 1rem;
+}
+
+.flash {
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.flash.success {
+  background: #14532d;
+  color: #dcfce7;
+}
+
+.flash.error {
+  background: #7f1d1d;
+  color: #fee2e2;
+}
